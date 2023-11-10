@@ -8,7 +8,6 @@ $color-link: yellow;
 $color-link-hover: rgb(103, 139, 4);
 $color-link-visited: rgb(235, 26, 11);
 
-
 $breakpoints-tablet: 425px;
 $breakpoints-desktop: 768px;
 
@@ -107,6 +106,61 @@ a {
 
     }
 
+#extend-elems {
+    .base {
+        width: 100px;
+        height: 50px;
+        padding: 1em;
+        text-align: center;
+        background-color: chocolate;
+        color: antiquewhite;
+        border: 0.5ch solid rebeccapurple;
+        border-radius: 1em;
+    }
+
+    .variant {
+        @extend .base;
+        border-color: aqua;
+    }
+
+    .other {
+        @extend .variant;
+        color: pink;
+
+    }
+}
+
+@mixin custom-border($color, $size: 5px) {   //par default// 
+    border: 1px solid $color;
+    border-radius: 1em;
+} //extend mais avec param en plus//
+
+
+#mixins {
+    #mix1, #mix2 {
+        padding: 1rem;
+        width: 100px;
+    }
+
+    #mix1 {
+        background-color: aqua;
+        @include custom-border(red)
+    }
+
+    #mix2 {
+        background-color: forestgreen;
+        @include custom-border(blue, 10px)
+    }
+
+}
+
+$elem-colors: (aqua, red, blue, green, plum, orange);
+@for $jo from 1 through 6 {
+    .elems#{$jo} {
+        color: nth($elem-colors, $jo);
+
+    }
+}
 
 
 

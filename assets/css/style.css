@@ -76,4 +76,60 @@ a:active {
   background-color: #CA907E;
 }
 
+#extend-elems .base, #extend-elems .variant, #extend-elems .other {
+  width: 100px;
+  height: 50px;
+  padding: 1em;
+  text-align: center;
+  background-color: chocolate;
+  color: antiquewhite;
+  border: 0.5ch solid rebeccapurple;
+  border-radius: 1em;
+}
+#extend-elems .variant, #extend-elems .other {
+  border-color: aqua;
+}
+#extend-elems .other {
+  color: pink;
+}
+
+#mixins #mix1, #mixins #mix2 {
+  padding: 1rem;
+  width: 100px;
+}
+#mixins #mix1 {
+  background-color: aqua;
+  border: 1px solid red;
+  border-radius: 1em;
+}
+#mixins #mix2 {
+  background-color: forestgreen;
+  border: 1px solid blue;
+  border-radius: 1em;
+}
+
+.elems1 {
+  color: aqua;
+}
+
+.elems2 {
+  color: red;
+}
+
+.elems3 {
+  color: blue;
+}
+
+.elems4 {
+  color: green;
+}
+
+.elems5 {
+  color: plum;
+}
+
+.elems6 {
+  color: orange;
+}
+
 /*# sourceMappingURL=style.css.map */
