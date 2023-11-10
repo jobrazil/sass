@@ -1,5 +1,14 @@
-$color-primary: gray;
-$color-secondary: lightgray;
+$color-primary: navy;
+$color-secondary: skyblue;
+$color-on-primary: hotpink;
+$color-on-secondary: green;
+$color-success: #3F6;
+$color-error: #C03;
+$color-link: yellow;
+$color-link-hover: rgb(103, 139, 4);
+$color-link-visited: rgb(235, 26, 11);
+
+
 
 
 * {
@@ -16,8 +25,60 @@ h1 {
 h2 {
     color: $color-secondary;
     font-size: 2rem;
+
+    + p{
+        font-style: oblique;
+    }
+
+    &:not(:first-of-type) {
+        color: palevioletred;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+    }
 }
 
+
+
 .btn{
-    background-color: aqua;
+    padding: 0.5ch;
+    border: none;
+    border-radius: 0.5em;
+    background-color: $color-primary;
+    color: $color-on-primary;
+    margin: 0.1rem;
+
+    &:hover {
+        background-color: $color-on-secondary;
+        transform: scale(1.1);
+    }
+
+&- {
+    
+    &success {
+        background-color: $color-success;
+    }
+    &error {
+        background-color: $color-error;
+    }
+
+}
+
+}
+
+a{
+    text-decoration: none;
+    color: $color-link;
+
+    &:visited {
+        color: $color-link-visited;
+    }
+    
+    &:hover, &focus {
+        color: $color-link-hover;
+    }
+
+    &:active {
+        font-weight: bold;
+    }
+
 }
