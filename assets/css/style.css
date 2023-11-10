@@ -55,4 +55,25 @@ a:active {
   font-weight: bold;
 }
 
+/*yo*/
+#elems {
+  --col: 1;
+  display: grid;
+  grid-template-columns: repeat(var(--col), 1fr);
+  gap: 0.5ch;
+}
+@media screen and (min-width: 425px) {
+  #elems {
+    --col: 2;
+  }
+}
+@media screen and (min-width: 768px) {
+  #elems {
+    --col: 5;
+  }
+}
+#elems .elem {
+  background-color: #CA907E;
+}
+
 /*# sourceMappingURL=style.css.map */

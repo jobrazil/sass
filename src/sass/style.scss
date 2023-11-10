@@ -9,7 +9,10 @@ $color-link-hover: rgb(103, 139, 4);
 $color-link-visited: rgb(235, 26, 11);
 
 
+$breakpoints-tablet: 425px;
+$breakpoints-desktop: 768px;
 
+// ecran de base: 6; table 2; mart: 2
 
 * {
     box-sizing: border-box;
@@ -60,12 +63,10 @@ h2 {
     &error {
         background-color: $color-error;
     }
-
+}
 }
 
-}
-
-a{
+a {
     text-decoration: none;
     color: $color-link;
 
@@ -80,5 +81,37 @@ a{
     &:active {
         font-weight: bold;
     }
-
 }
+
+// mobile: moins 425px(1elem par ligne); tablet: 426 &768px(2 elems) desktop 760 (6elems)
+/*yo*/
+#elems {
+    //var locale//
+    $gap-elem: 0.5ch;
+    --col: 1;
+
+    display: grid;
+    grid-template-columns: repeat(var(--col), 1fr);
+    gap: $gap-elem;
+
+    @media screen and (min-width: $breakpoints-tablet) {       
+        --col: 2;
+    }
+    @media screen and (min-width: $breakpoints-desktop) {       
+        --col: 5;
+    }
+
+    .elem {
+        background-color: #CA907E;
+        }
+
+
+
+    }
+
+
+
+
+
+
+
